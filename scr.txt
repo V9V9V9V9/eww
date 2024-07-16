@@ -57,6 +57,8 @@ else
 			["Y"] = "Υ"
 		}
 
+		local default = " ိ"
+
 		local player = players.LocalPlayer
 		local playerGui = player:WaitForChild("PlayerGui")
 		local chatGui, chatBar = playerGui:WaitForChild("Chat")
@@ -122,10 +124,10 @@ else
 				if bypassing then
 					local newMessage = args[1]
 					for i, v in pairs(custom_chars) do
-						local rep = string.gsub(newMessage, i, v .. "1")
+						local rep = string.gsub(newMessage, i, v .. "а")
 						newMessage = rep
 					end
-					newMessage = "1" .. newMessage ..
+					newMessage = "а" .. newMessage .. default
 
 					args[1] = newMessage
 					coroutine.wrap(c)
