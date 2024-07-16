@@ -124,10 +124,10 @@ else
 				if bypassing then
 					local newMessage = args[1]
 					for i, v in pairs(custom_chars) do
-						local rep = string.gsub(newMessage, i, v .. "а")
+						local rep = string.gsub(newMessage, i, v .. )
 						newMessage = rep
 					end
-					newMessage = "а" .. newMessage .. default
+					newMessage = .. newMessage .. default
 
 					args[1] = newMessage
 					coroutine.wrap(c)
